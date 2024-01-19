@@ -1,0 +1,66 @@
+/* ====== SHOW VIEW ====== */
+
+body[data-theme=neu] {
+
+  /**
+ * Selects the containing div of the _record partial on a show page.
+ */
+  div[id*="_"]:first-of-type {
+    border-radius: var(--border-radius);
+    box-shadow: var(--neumorphic-concave-box-shadow);
+    padding: var(--spacing) calc(var(--spacing) * 2);
+  }
+
+  /**
+ * Selects the links + form div that immediately follows _record partial
+ * on a show page.
+ */
+  div[id*="_"]:first-of-type+div {
+    color: var(--base-color);
+    margin-top: var(--vertical-spacing);
+  }
+
+  /**
+ * Selects the "Edit this Records" link and adds an edit icon.
+ */
+  div[id*="_"]:first-of-type+div a:first-child:before {
+    content: var(--edit);
+    margin-right: calc(var(--spacing) / 2);
+  }
+
+  /**
+ * Selects the "Back to Records" link on a new page and repositions it to
+ * the top right of the page.
+ */
+  div[id*="_"]:first-of-type+div a:nth-child(2) {
+    position: absolute;
+    right: var(--body-padding);
+    top: calc(var(--vertical-padding) + var(--border-width) * 2);
+
+    &:before {
+      content: var(--left);
+      margin-right: calc(var(--spacing) / 2);
+    }
+  }
+
+  /**
+ * Adjusts the "Destroy this Record" form display inline-block.
+ */
+  div[id*="_"]:first-of-type+div form {
+    display: inline-block;
+  }
+
+  /**
+  * Adjusts the delete form button[type=submit] to match link styles on show page.
+  */
+  div[id*="_"]:first-of-type+div form button[type=submit] {
+    font-size: var(--font-size);
+    padding: var(--link-padding);
+    border-radius: var(--link-border-radius);
+
+    &:before {
+      content: var(--remove);
+      margin-right: calc(var(--spacing) / 2);
+    }
+  }
+}

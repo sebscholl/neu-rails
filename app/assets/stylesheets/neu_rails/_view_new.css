@@ -1,0 +1,25 @@
+/* ====== NEW VIEW ====== */
+
+body[data-theme=neu] {
+
+  /**
+ * Selects the div containing links on the new view and repositions it to
+ * the top right of the page.
+ */
+  form[method=post]:first-of-type+br+div {
+    position: absolute;
+    right: var(--body-padding);
+    top: calc(var(--vertical-padding) + var(--border-width) * 2);
+  }
+
+  /**
+ * Selects the "Back to Records" link on a new page and adds a left facing
+ * arrow.
+ */
+  form[method=post]:first-of-type+br+div a:last-child {
+    &:before {
+      content: var(--left);
+      margin-right: calc(var(--spacing) / 2);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/**
+ * Forms
+ *
+ * This file contains the styles for forms.
+ */
+body[data-theme=neu] {
+
+  /**
+  * Selects the input[type=submit] element in the records form partial.
+  */
+  >form>div:last-child {
+    padding: var(--spacing) 0;
+  }
+}

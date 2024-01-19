@@ -1,0 +1,182 @@
+/**
+ * Elements Styles
+ *
+ * These style rules only apply to standard HTML elements. They are not used
+ * for styling components based on layouts or nested elements.
+ */
+
+/* All */
+body[data-theme=neu] * {
+  border: none;
+  color: var(--color);
+  box-sizing: border-box;
+  font-family: var(--font-family);
+
+  &:not(h1, h2, h3, h4, h5, h6, small) {
+    font-size: var(--font-size);
+    word-spacing: var(--typeography-word-spacing);
+  }
+}
+
+body[data-theme=neu] {
+
+  /* Links */
+  a {
+    cursor: pointer;
+    color: var(--color);
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: var(--font-size);
+    padding: var(--link-padding);
+    border-radius: var(--link-border-radius);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+    transition: box-shadow var(--transitions-duration);
+  }
+
+  a:hover {
+    box-shadow: var(--neumorphic-convex-box-shadow-hover);
+  }
+
+  a:focus,
+  a:active,
+  a:visited {
+    box-shadow: var(--neumorphic-concave-box-shadow);
+  }
+
+
+  /* Buttons */
+  button {
+    cursor: pointer;
+    white-space: nowrap;
+    border: var(--border);
+    padding: var(--button-padding);
+    background-color: var(--base-color);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+    transition: box-shadow var(--transitions-duration);
+
+    &:hover {
+      box-shadow: var(--neumorphic-convex-box-shadow-hover);
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: var(--neumorphic-concave-box-shadow);
+    }
+  }
+
+  /* Forms */
+  label {
+    display: block;
+    font-size: small;
+    margin-bottom: var(--spacing-half);
+  }
+
+  select,
+  textarea,
+  input[type=text],
+  input[type=file],
+  input[type=date],
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=checkbox],
+  input[type=datetime-local] {
+    padding: var(--input-padding);
+    margin-bottom: var(--spacing);
+    background-color: var(--base-color);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-concave-box-shadow);
+    transition: box-shadow var(--transitions-duration);
+
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: var(--neumorphic-concave-box-shadow-hover);
+    }
+  }
+
+  select[multiple] option::before {
+    content: var(--connect);
+    margin-right: calc(var(--spacing) / 2);
+  }
+
+  textarea {
+    width: 100%;
+    resize: var(--text-area-resize);
+    min-height: var(--text-area-min-height);
+  }
+
+  button[type=submit],
+  input[type=submit] {
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--color);
+    border: var(--border);
+    padding: var(--button-padding);
+    background-color: var(--base-color);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+    transition: box-shadow var(--transitions-duration);
+
+    &:hover {
+      box-shadow: var(--neumorphic-convex-box-shadow-hover);
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: var(--neumorphic-concave-box-shadow);
+    }
+  }
+
+  input[type=file]::file-selector-button {
+    cursor: pointer;
+    border: var(--border);
+    background: var(--base-color);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+  }
+
+  input[type=file]::-ms-browse {
+    cursor: pointer;
+    border: var(--border);
+    background: var(--base-color);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+  }
+
+  input[type=file]::-webkit-file-upload-button {
+    cursor: pointer;
+    border: var(--border);
+    background: var(--base-color);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+  }
+
+  /* Images */
+  img {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--neumorphic-convex-box-shadow);
+  }
+
+  /* Tables */
+  table {
+    border-spacing: var(--spacing);
+  }
+
+  th {
+    /* text-align: left; */
+    font-weight: bold;
+  }
+
+  td {
+    text-align: center;
+    padding: 2px 5px;
+    font-weight: lighter;
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--neumorphic-concave-box-shadow);
+  }
+}

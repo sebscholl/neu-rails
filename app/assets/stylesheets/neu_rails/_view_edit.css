@@ -1,0 +1,37 @@
+/* ====== EDIT VIEW ====== */
+
+body[data-theme=neu] {
+
+  /**
+ * Selects the div containing links on the edit view and repositions it to
+ * the top right of the page.
+ */
+  form[method=post]:first-of-type+br+div {
+    position: absolute;
+    color: var(--base-color);
+    right: var(--body-padding);
+    top: calc(var(--vertical-padding) + var(--border-width) * 2);
+  }
+
+  /**
+ * Selects the "Show this Records" link on a edit page and adds a view
+ * icon.
+ */
+  form[method=post]:first-of-type+br+div a:first-child {
+    &:before {
+      content: var(--show);
+      margin-right: calc(var(--spacing) / 2);
+    }
+  }
+
+  /**
+ * Selects the "Back to Records" link on a new page and adds a left facing
+ * arrow.
+ */
+  form[method=post]:first-of-type+br+div a:last-child {
+    &:before {
+      content: var(--left);
+      margin-right: calc(var(--spacing) / 2);
+    }
+  }
+}

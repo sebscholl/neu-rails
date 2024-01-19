@@ -1,0 +1,17 @@
+/**
+ * Styling applied to the body element.
+ */
+body[data-theme=neu] {
+  margin: 0 auto;
+  padding: var(--body-padding);
+  max-width: var(--body-max-width);
+  min-width: var(--body-min-width);
+  background-color: var(--base-color);
+
+  /**
+ * Styling applied div elements nested inside forms
+ */
+  form>div {
+    margin-bottom: var(--spacing-half);
+  }
+}

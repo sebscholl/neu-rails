@@ -1,0 +1,65 @@
+/**
+ * NeuRails Variables
+ */
+
+:root {
+  /* General */
+  --body-max-width: 750px;
+  --body-min-width: 300px;
+  --transitions-duration: 0.25s;
+
+  /* Borders */
+  --border-width: .0625rem;
+  --border-radius: 1.25rem;
+  --border: var(--border-width) solid transparent;
+
+  /* Characters */
+  --up: "☝🏽";
+  --down: "👇🏽";
+  --left: "👈🏽";
+  --right: "👉🏽";
+  --add: "🌟";
+  --show: "👀";
+  --edit: "🔧";
+  --remove: "🗑️";
+  --connect: "🖇";
+
+  /* Colors */
+  --color: #31344b;
+  --base-color: #e0e0e0;
+
+  /* Typography vars */
+  --font-size: 14px;
+  --font-family: sans-serif;
+  --typeography-word-spacing: 0;
+
+  /* Links */
+  --link-padding: 0 5px;
+  --link-border-radius: 3px;
+
+  /* Spacing */
+  --spacing: 1rem;
+  --spacing-half: calc(var(--spacing) / 2);
+  --vertical-spacing: calc(var(--spacing) * 2);
+  --horizontal-spacing: calc(var(--spacing) * 4);
+  --block-vertical-spacing: calc(var(--spacing) * 1.5);
+
+  /* Padding */
+  --body-padding: 5rem;
+  --input-padding: 1rem;
+  --vertical-padding: 1.5rem;
+  --horizontal-padding: 3rem;
+
+  /* Inputs */
+  --text-area-resize: vertical;
+  --text-area-min-height: 100px;
+
+  /* Buttons */
+  --button-padding: var(--spacing) calc(var(--spacing) * 2);
+
+  /* Neumorphic Effects */
+  --neumorphic-convex-box-shadow: -3px 3px 6px #a1a1a1, 3px -3px 6px #ffffff;
+  --neumorphic-concave-box-shadow: inset -3px -3px 6px #a1a1a1, inset 3px 3px 6px #ffffff;
+  --neumorphic-convex-box-shadow-hover: -1px 1px 2px #a1a1a1, 1px -1px 2px #ffffff;
+  --neumorphic-concave-box-shadow-hover: inset -1px -1px 2px #a1a1a1, inset 1px 1px 2px #ffffff;
+}

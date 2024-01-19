@@ -1,0 +1,47 @@
+/* ====== INDEX VIEW ====== */
+
+body[data-theme=neu] {
+
+  /**
+ * Selects the templated partial iterated over on an index page.
+ */
+  div[id]:first-of-type div[id] {
+    border-radius: var(--border-radius);
+    box-shadow: var(--neumorphic-concave-box-shadow);
+    padding: var(--spacing) calc(var(--spacing) * 2);
+  }
+
+  /**
+ * Selects the paragraph tag that contains the "Show this Record" link
+ * on an index page.
+ */
+  div[id]:first-of-type div[id]+p {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  /**
+ * Selects the "Show this Record" link on an index page placed
+ * immediately after the templated partial iterated over and adds an
+ * upward facing arrow.
+ */
+  div[id]:first-of-type div[id]+p a::after {
+    content: var(--up);
+    margin-left: calc(var(--spacing) / 2);
+  }
+
+  /**
+ * Selects the "New Record" link on an index page and repositions it.
+ * to the top right of the page.
+ */
+  div[id]:first-of-type+a {
+    position: absolute;
+    right: var(--body-padding);
+    top: calc(var(--vertical-padding) + var(--border-width) * 2);
+
+    &:before {
+      content: var(--add);
+      margin-right: calc(var(--spacing) / 2);
+    }
+  }
+
+}
