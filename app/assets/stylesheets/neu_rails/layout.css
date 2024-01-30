@@ -14,4 +14,11 @@ body[data-theme=neu] {
   form>div {
     margin-bottom: var(--spacing-half);
   }
+
+  /**
+  * Selects the input[type=submit] element in the records form partial.
+  */
+  >form>div:last-child {
+    padding: var(--spacing) 0;
+  }
 }

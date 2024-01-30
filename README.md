@@ -25,6 +25,7 @@ rails g scaffold Post title:string body:rich_text published_at:datetime featured
 All relevant files are contained in the `app/assets/stylesheets/nue_rails` directory. They include:
 
 - `elements.css` - used for HTML element styling.
+- `actiontext.css` - use for styling the Trix editor.
 - `variables.css` - used for setting all CSS variables.
-- `adjusters.css` - user for defining helper classes (i.e. padding)
 - `layout.css` - used for positioning of elements generated in default views.
+- `view_TYPE.css` - used for styling the default views (index, new, show, edit)
